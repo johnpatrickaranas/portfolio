@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Aranas | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Inter', sans-serif; }
+        .project-card { border: none; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: 0.3s; }
+        .project-card:hover { transform: translateY(-5px); }
+        .accordion-button:not(.collapsed) { background-color: #e7f1ff; color: #0d6efd; }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <h1 class="text-center mb-5">Technical Portfolio</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card project-card p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3 class="mb-0">Media Bridge Utility</h3>
+                    <span class="badge bg-primary">PHP | CLI | Transcoding</span>
+                </div>
+                
+                <p class="text-muted">A hybrid desktop utility for high-fidelity media processing.</p>
+
+                <div class="accordion" id="projectAccordion">
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#descriptionOne">
+                                View Project Details
+                            </button>
+                        </h2>
+                        <div id="descriptionOne" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                            <div class="accordion-body text-secondary">
+                                <h5>Key Features:</h5>
+                                <ul>
+                                    <li><strong>Hybrid Architecture:</strong> Integrated PHP with Windows COM objects for invisible CLI execution.</li>
+                                    <li><strong>Smart Transcoding:</strong> Automated conversion of video to MP3 using FFmpeg binaries.</li>
+                                    <li><strong>Cross-Platform:</strong> Custom shell scripts for both Windows and macOS compatibility.</li>
+                                </ul>
+                                <hr>
+                                <div class="d-flex gap-2">
+                                    <a href="YOUR_GITHUB_LINK_HERE" class="btn btn-dark btn-sm">GitHub Repo</a>
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Video Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
