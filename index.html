@@ -10,19 +10,20 @@
         :root { --primary-color: #0d6efd; --dark-bg: #212529; }
         body { background-color: #f4f7f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; }
         .hero-section { background: var(--dark-bg); color: white; padding: 60px 0; border-bottom: 5px solid var(--primary-color); }
-        .project-card { border: none; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background: white; transition: 0.3s; }
+        .project-card { border: none; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background: white; transition: 0.3s; margin-bottom: 30px; }
         .project-card:hover { transform: translateY(-10px); }
         .tech-badge { background: #e9ecef; color: #495057; font-weight: 600; font-size: 0.8rem; padding: 5px 12px; border-radius: 20px; }
         .accordion-button:not(.collapsed) { background-color: #f0f7ff; color: #0d6efd; box-shadow: none; }
     </style>
 </head>
 <body>
+
 <section class="hero-section text-center">
     <div class="container">
         <h1 class="display-4 fw-bold">John Patrick Servidad Aranas</h1>
-        <p class="lead text-info">BS in Computer Engineering | Major in Database Management Systems</p>
+        <p class="lead text-info text-uppercase fw-semibold">BS in Computer Engineering | Major in Database Management Systems</p>
         <div class="mt-3">
-            <span class="me-3"><i class="bi bi-person"></i> 27 Years Old</span
+            <span class="me-3"><i class="bi bi-person"></i> 27 Years Old</span>
         </div>
     </div>
 </section>
@@ -30,13 +31,13 @@
 <div class="container py-5">
     <div class="row mb-5 text-center">
         <div class="col-12">
-            <h2 class="mb-4">Technical Expertise</h2>
+            <h2 class="mb-4 fw-bold">Technical Expertise</h2>
             <div class="d-flex flex-wrap justify-content-center gap-2">
-                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">PHP 8.3</span>
+                <span class="tech-badge">SQL & Database Management</span>
+                <span class="tech-badge">IoT & Microcontrollers</span>
                 <span class="tech-badge">HTML5/CSS3</span>
                 <span class="tech-badge">JavaScript</span>
-                <span class="tech-badge">VBScript / Shell Scripting</span>
-                <span class="tech-badge">SQL & Database Management</span>
                 <span class="tech-badge">System Integration</span>
             </div>
         </div>
@@ -44,8 +45,50 @@
 
     <div class="row justify-content-center">
         <div class="col-lg-9">
-            <h2 class="mb-4"><i class="bi bi-code-square"></i> Featured Project</h2>
             
+            <h2 class="mb-4"><i class="bi bi-heart-pulse-fill text-danger"></i> Engineering Thesis</h2>
+            <div class="card project-card p-4">
+                <div class="row align-items-center">
+                    <div class="col-md-9">
+                        <h3 class="fw-bold">IoT Vital Sign Monitoring System</h3>
+                        <p class="text-muted small">A healthcare communication solution designed for evacuation centers.</p>
+                    </div>
+                    <div class="col-md-3 text-md-end">
+                        <span class="badge bg-success">Major Project</span>
+                    </div>
+                </div>
+
+                <div class="accordion mt-3" id="thesisAccordion">
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed rounded bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#thesisDetails">
+                                <strong>Objective, Significance & Scope</strong>
+                            </button>
+                        </h2>
+                        <div id="thesisDetails" class="accordion-collapse collapse" data-bs-parent="#thesisAccordion">
+                            <div class="accordion-body border rounded-bottom bg-white">
+                                <h5>1.2 Objective of the Study</h5>
+                                <p>This study designed a vital sign monitoring system for evacuation centers that allows patients to send their vital signs such as blood pressure, body temperature and pulse rate through a web application. Health professionals can then send diagnoses and medical prescriptions based on the readings.</p>
+                                
+                                <h6>Specific Objectives:</h6>
+                                <ul class="small">
+                                    <li>Program sensors in a microcontroller to measure Blood Pressure, Temperature, and Pulse Rate.</li>
+                                    <li>Design a local and cloud database system to manage patient biometrics and professional records.</li>
+                                    <li>Create a web application with notification systems for real-time monitoring.</li>
+                                </ul>
+
+                                <h5 class="mt-4">1.3 Significance of the Study</h5>
+                                <p class="small">This study benefits citizens (teens, adults, and elders) by providing immediate medical feedback. It assists health professionals in delivering diagnosis via smartphones and acts as a foundation for future healthcare communication research.</p>
+
+                                <h5 class="mt-4">1.4 Scope and Limitation</h5>
+                                <p class="small">Focused on specific parameters: blood pressure, pulse rate, and temperature. The system features a <strong>Hybrid Database</strong>: data is stored in a local database when offline and automatically synced to the cloud once internet becomes available.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="mb-4 mt-5"><i class="bi bi-code-square"></i> Software Development</h2>
             <div class="card project-card p-4">
                 <div class="row align-items-center">
                     <div class="col-md-8">
@@ -53,7 +96,7 @@
                         <p class="text-muted">A high-performance desktop wrapper for media transcoding and local asset management.</p>
                     </div>
                     <div class="col-md-4 text-md-end">
-                        <a href="YOUR_GITHUB_LINK_HERE" class="btn btn-primary w-100">View Source Code</a>
+                        <button class="btn btn-outline-secondary w-100" disabled><i class="bi bi-lock-fill"></i> Private Project</button>
                     </div>
                 </div>
 
@@ -68,20 +111,20 @@
                             <div class="accordion-body border rounded-bottom bg-white">
                                 <h6><strong>Languages & Technologies Used:</strong></h6>
                                 <ul>
-                                    <li><strong>HTML5 & CSS3:</strong> Built a responsive, modern dashboard interface using Bootstrap 5 frameworks for a seamless user experience.</li>
-                                    <li><strong>JavaScript:</strong> Handled client-side interactions and asynchronous UI updates to ensure the application remains responsive during processing.</li>
-                                    <li><strong>PHP 8.3:</strong> Managed the backend server logic, directory handling, and persistent data storage using JSON flat-files.</li>
-                                    <li><strong>VBScript & Bash:</strong> Engineered OS-specific launchers for Windows and macOS, handling background execution of binaries.</li>
-                                    <li><strong>CLI Integration:</strong> Orchestrated <strong>yt-dlp</strong> and <strong>FFmpeg</strong> engines for high-bitrate media transcoding.</li>
+                                    <li><strong>HTML5 & CSS3:</strong> Built a responsive, modern dashboard interface using Bootstrap 5.</li>
+                                    <li><strong>JavaScript:</strong> Handled client-side interactions and asynchronous UI updates.</li>
+                                    <li><strong>PHP 8.3:</strong> Managed the backend server logic and JSON flat-file storage.</li>
+                                    <li><strong>VBScript & Bash:</strong> Engineered OS-specific launchers for Windows and macOS.</li>
                                 </ul>
 
                                 <h6 class="mt-4"><strong>Key Achievements:</strong></h6>
-                                <p>Successfully bridged web-based UI with local system processes using the <strong>Windows COM (WScript.Shell)</strong> object, allowing for invisible background execution and high-performance file management.</p>
+                                <p>Successfully bridged web-based UI with local system processes using the <strong>Windows COM</strong> object for background execution.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
